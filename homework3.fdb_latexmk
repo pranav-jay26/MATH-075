@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1727164281.81016 "homework3.tex" "homework3.pdf" "homework3" 1727164282.03101 2
+["pdflatex"] 1727252452.9427 "homework3.tex" "homework3.pdf" "homework3" 1727252453.17559 2
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1716849630 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1716849630 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1716849630 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -30,6 +30,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1716849630 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1716849630 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1716849630 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1716849630 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1716849630 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty" 1716849630 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1716849630 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
@@ -58,8 +59,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1716849630 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1727156585.10045 5307366 7c8b2c5f25a30f46e808245b8e6cf269 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727156647 7112995 9e5efaa4a9ac6a68a9ac6bbf1530975d ""
-  "homework3.aux" 1727164282.0025 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "homework3.tex" 1727164280.39585 1877 53812dbf6c3f083da0a158178264147a ""
+  "homework3.aux" 1727252453.14249 140 68dd2b328892253ccd874b1ef6aa07f7 "pdflatex"
+  "homework3.tex" 1727252451.03584 5038 820b790c55295a4f791fa82778e6104a ""
   (generated)
   "homework3.aux"
   "homework3.log"
