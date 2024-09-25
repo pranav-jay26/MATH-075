@@ -12,13 +12,139 @@
 
 
 
-\title{Math 075 Homework 3}
+\title{Math 075 Homework 4}
 \author{Pranav Jayakumar}
 
 \begin{document}
 
 \maketitle
 
-\subsection*{Exercise 1}
+\subsection*{Exercise 2.3.7}
+\vspace{0.25in}
+\subsubsection*{Problem}
+\vspace{0.25in}
+\subsubsection*{Part (a)}
+If $A^2$ can be formed, what can be said about the size of $A$?\\ 
+\subsubsection*{Solution (a)}
+If $A^2$ can be formed, this implies that a matrix must be square, since the number of rows and columns match.\\ 
+\vspace{0.25in}
+\subsubsection*{Part (b)}
+If $AB$ and $BA$ can both be formed, what does this say about the sizes of bot $A$ and $B$?\\ 
+\subsubsection*{Solution (b)}
+When two matrices are multiplied together, the order in which they are multiplied affects the result, due to the fact that the dimensions must be matched. When $AB$ is equal to $BA$, it means that $A$ and $B$ are the same size.
+\vspace{0.25in}
+\subsubsection*{Part (c)}
+If $ABC$ can be formed, $A = 3\times 3$, and $C = 5 \times 5$, what size is $B$?\\ 
+\subsubsection*{Solution (c)}
+For two matrices $A$ and $B$ to be multiplied together, the number of columns in $A$ must be equal to the number of rows in $B$. For $ABC$ to be a valid matrix multiplication, the number of columns in $A$ must be equal to the number of rows in $B$, and the number of columns in $B$ must be equal to the number of rows in $C$. Therefore, $B$ has dimensions $3 \times 5$.\\ 
+\vspace{2in}
+\subsection*{Exercise 2.3.9}
+\vspace{0.25in}
+\subsubsection*{Problem}
+Write P = 
+$\begin{bmatrix}
+  1 & 0 & 0\\ 
+  0 & 0 & 1\\ 
+  0 & 1 & 0 
+\end{bmatrix}$, 
+and let $A$ be $3 \times n$ and $B$ be $m \times 3$. 
+\vspace{0.25in}
+\subsubsection*{Part (a)}
+Describe $PA$ in terms of the rows of $A$. 
+\vspace{0.25in}
+\subsubsection*{Solution (a)}
+For all $PA$ where $P$ is size $3 \times 3$, and $A$ is size $3 \times n$, $PA$ would have dimensions $3 \times n$.\\ 
+\[
+  P = 
+  \begin{bmatrix}
+    1 & 0 & 0\\ 
+    0 & 0 & 1\\ 
+    0 & 1 & 0 
+  \end{bmatrix}
+  ,\hspace{0.1in}
+  A = 
+  \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} & \cdots & a_{1n}\\ 
+    a_{21} & a_{22} & a_{23} & \cdots & a_{2n}\\ 
+    a_{31} & a_{32} & a_{33} & \cdots & a_{3n} 
+  \end{bmatrix}
+\]
+\[
+  PA = 
+  \begin{bmatrix}
+    pa_{11} & pa_{12} & pa_{13} & \cdots & pa_{1n} 
 
+  \end{bmatrix}, \hspace{0.1in}
+  pa_{ij} = \displaystyle\sum_{k = 1}^{n} p_{ik} \cdot a_{kj}
+\]
+\vspace{0.25in}
+\subsubsection*{Part (b)}
+\[
+  P = 
+  \begin{bmatrix}
+    1 & 0 & 0\\ 
+    0 & 0 & 1\\ 
+    0 & 1 & 0 
+  \end{bmatrix}, \hspace{0.1in}
+  B = 
+  \begin{bmatrix}
+    b_{11} & b_{12} & b_{13}\\ 
+    b_{21} & b_{22} & b_{23}\\ 
+    b_{31} & b_{32} & b_{33} \\ 
+    \vdots & \vdots & \vdots\\ 
+    b_{m1} & b_{m2} & b_{m3} 
+  \end{bmatrix}
+\]
+\[
+  PB = 
+  \begin{bmatrix}
+    pb_1 & pb_2 & pb_3 
+  \end{bmatrix}, \hspace{0.1in}
+  pb_i = \displaystyle\sum_{k = 1}^{3}\displaystyle\sum_{j = 1}^{m} p_{ik} \cdot b_{kj}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.4.2}
+\vspace{0.25in}
+\subsubsection*{Problem}
+Find the inverse of each of the following matrices. 
+\vspace{0.25in}
+\subsubsection*{Part (c)}
+\[
+  \begin{bmatrix}
+    1 & 0 & -1\\ 
+    3 & 2 & 0\\ 
+    -1 & -1 & 0 
+  \end{bmatrix}
+\]
+\subsubsection*{Solution (c)}
+\[
+  A \cdot A^{-1} = I_{n}
+\]
+\[
+  A = 
+  \begin{bmatrix}
+    1 & 0 & -1\\ 
+    3 & 2 & 0\\ 
+    -1 & -1 & 0 
+  \end{bmatrix}, \hspace{0.1in}
+  A^{-1} = RREF\left(
+    \begin{bmatrix}
+      1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+      3 & 2 & 0 & \bigm| & 0 & 1 & 0\\ 
+      -1 & -1 & 0 & \bigm| & 0 & 0 & 1 
+    \end{bmatrix}\right)
+\]
+\[
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    3 & 2 & 0 & \bigm| & 0 & 1 & 0\\ 
+    -1 & -1 & 0 & \bigm| & 0 & 0 & 1 
+  \end{bmatrix}
+  \overset{R_3 \leftrightarrow R_2}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    -1 & -1 & 0 & \bigm| & 0 & 0 & 1\\ 
+    3 & 2 & 0 & \bigm| & 0 & 1 & 0 
+  \end{bmatrix}
+\]
 \end{document}
