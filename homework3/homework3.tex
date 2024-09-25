@@ -241,7 +241,7 @@ In each case, express every solution of the system as a sum of a specific soutio
   \end{bmatrix}
 \end{equation*}
 \vspace{2in}
-\subsection{Exercise 2.2.12}
+\subsection*{Exercise 2.2.12}
 \vspace{0.25in}
 \subsubsection*{Problem}
 The projection $P : \mathbb{R}^3 \rightarrow \mathbb{R}^2$ is defined by $P\begin{bmatrix}
@@ -263,6 +263,56 @@ $\begin{bmatrix}
 \end{bmatrix}
 $ 
 in $\mathbb{R}^3$. Show that $P$ is induced by a matrix and find the matrix. 
+\vspace{0.25in}
+\subsubsection*{Solution}
+\vspace{0.25in}
+\[
+  P_A\textbf{x} = A\textbf{x}
+\]
+\[
+  A\textbf{b} = I\textbf{x}
+\]
 
+\[
+  \begin{bmatrix}
+    P_1 & P_2 & P_3 
+  \end{bmatrix}
+  \begin{bmatrix}
+    x\\ 
+    y\\ 
+    z 
+  \end{bmatrix}
+  = I_2
+  \begin{bmatrix}
+    x\\ 
+    y 
+  \end{bmatrix}
+\]
+\[
+  \begin{bmatrix}
+    1 & 0 & 0\\ 
+    0 & 1 & 0 
+  \end{bmatrix}
+  \begin{bmatrix}
+    x\\ 
+    y\\ 
+    z 
+  \end{bmatrix}
+  = 
+  \begin{bmatrix}
+    1 & 0\\ 
+    0 & 1 
+  \end{bmatrix}
+  \begin{bmatrix}
+    x\\ 
+    y 
+  \end{bmatrix}
+\]
+\[
+  A = \begin{bmatrix}
+    1 & 0 & 0\\ 
+    0 & 1 & 0 
+  \end{bmatrix}
+\]
 \end{document}
 
