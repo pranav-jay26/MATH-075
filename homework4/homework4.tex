@@ -147,4 +147,310 @@ Find the inverse of each of the following matrices.
     3 & 2 & 0 & \bigm| & 0 & 1 & 0 
   \end{bmatrix}
 \]
+\[
+  \overset{R_2 \rightarrow R_2 + R_1}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    0 & -1 & -1 & \bigm| & 1 & 0 & 1\\ 
+    3 & 2 & 0 & \bigm| & 0 & 1 & 0 
+  \end{bmatrix}
+  \overset{R_3 \rightarrow R_3 - 3R_1}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    0 & -1 & -1 & \bigm| & 1 & 0 & 1\\ 
+    0 & 2 & 3 & \bigm| & -3 & 1 & 0 
+  \end{bmatrix}
+\]
+\[
+  \overset{R_3 \rightarrow R_3 + 2R_2}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    0 & -1 & -1 & \bigm| & 1 & 0 & 1\\ 
+    0 & 0 & 1 & \bigm| & -1 & 1 & 2 
+  \end{bmatrix}
+  \overset{R_2 \rightarrow R_2 + R_3}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    0 & -1 & 0 & \bigm| & 0 & 1 & 3\\ 
+    0 & 0 & 1 & \bigm| & -1 & 1 & 2 
+  \end{bmatrix}
+\]
+\[
+  \overset{R_2 \rightarrow -R_2}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & -1 & \bigm| & 1 & 0 & 0\\ 
+    0 & 1 & 0 & \bigm| & 0 & -1 & -3\\ 
+    0 & 0 & 1 & \bigm| & -1 & 1 & 2 
+  \end{bmatrix}
+  \overset{R_1 \rightarrow R_1 + R_3}{\longrightarrow}
+  \begin{bmatrix}
+    1 & 0 & 0 & \bigm| & 0 & 1 & 2\\ 
+    0 & 1 & 0 & \bigm| & 0 & -1 & -3\\ 
+    0 & 0 & 1 & \bigm| & -1 & 1 & 2 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\[
+  A^{-1} = 
+  \begin{bmatrix}
+    0 & 1 & 2\\ 
+    0 & -1 & -3\\ 
+    -1 & 1 & 2 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.4.4}
+\vspace{0.25in}
+\subsubsection*{Problem}
+We are given the matrix
+$A^{-1} =  
+\begin{bmatrix}
+  1 & -1 & 3\\ 
+  2 & 0 & 5\\ 
+  -1 & 1 & 0 
+\end{bmatrix}
+$. 
+\vspace{0.25in}
+\subsubsection*{Part (a)}
+Solve the system of equations
+$A\textbf{x} = 
+\begin{bmatrix}
+  1\\ 
+  -1\\ 
+  3 
+\end{bmatrix}.
+$ 
+\vspace{0.25in}
+\subsubsection*{Solution (a)}
+\[
+  A\textbf{x} = \textbf{b}
+\]
+\[
+  A^{-1} \cdot A\textbf{x} = I_{n}\textbf{b}
+\]
+\[
+  \begin{bmatrix}
+    1 & -1 & 3\\ 
+    2 & 0 & 5\\ 
+    -1 & 1 & 0 
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\ 
+    -1\\ 
+    3 
+  \end{bmatrix}
+  = 
+  I_{n}\textbf{b}
+\]
+\[
+  1\begin{bmatrix}
+    1\\ 
+    2\\ 
+    -1 
+  \end{bmatrix}
+  - 1\begin{bmatrix}
+    -1\\ 
+    0\\ 
+    1 
+  \end{bmatrix}
+  + 3\begin{bmatrix}
+    3\\ 
+    5\\ 
+    0 
+  \end{bmatrix}
+  = \textbf{x}
+\]
+\vspace{0.25in}
+\[
+  \textbf{x} = 
+  \begin{bmatrix}
+    11\\ 
+    17\\ 
+    -2 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\subsubsection*{Part (c)}
+Find a matrix $C$ such that $CA = 
+\begin{bmatrix}
+  1 & 2 & -1\\ 
+  3 & 1 & 1 
+\end{bmatrix}$. 
+\vspace{0.25in}
+\subsubsection*{Solution (c)}
+\[
+  CAA^{-1} = CI 
+\]
+\[
+  \begin{bmatrix}
+    1 & 2 & -1\\ 
+    3 & 1 & 1 
+  \end{bmatrix}
+  \begin{bmatrix}
+    1 & -1 & 3\\ 
+    2 & 0 & 5\\ 
+    -1 & 1 & 0 
+  \end{bmatrix}
+  = C 
+\]
+\[
+  C =
+  \begin{bmatrix}
+    1 - 1 + 3 & 4 + 0 + 10 & 1 - 1 + 0\\ 
+    3 - 3 + 9 & 2 + 0 + 5 & -1 + 1 + 0 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\[
+  C = 
+  \begin{bmatrix}
+    3 & 14 & 0\\ 
+    9 & 7 & 0 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.4.5}
+\vspace{0.25in}
+\subsubsection*{Problem}
+Find $A$. 
+\vspace{0.25in}
+\subsubsection*{Part (e)}
+\[
+  \left(
+    A 
+    \begin{bmatrix}
+      1 & -1\\ 
+      0 & 1 
+    \end{bmatrix}
+  \right)^{-1}
+  = 
+  \begin{bmatrix}
+    2 & 3\\ 
+    1 & 1 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\subsubsection*{Solution (e)}
+\[
+  A 
+  \begin{bmatrix}
+    1 & -1\\ 
+    0 & 1 
+  \end{bmatrix}
+  = 
+  \begin{bmatrix}
+    2 & 3\\ 
+    1 & 1 
+  \end{bmatrix}^{-1}
+\]
+\[
+  A 
+  \begin{bmatrix}
+    1 & -1\\ 
+    0 & 1 
+  \end{bmatrix}
+  = \frac{1}{2 - 3} 
+  \begin{bmatrix}
+    1 & -3\\ 
+    -1 & 2 
+  \end{bmatrix}
+\]
+\[
+  A 
+  \begin{bmatrix}
+    1 & -1\\ 
+    0 & 1 
+  \end{bmatrix}
+  = -1
+  \begin{bmatrix}
+    1 & -3\\ 
+    -1 & 2 
+  \end{bmatrix}
+\]
+\[
+  A = 
+  \begin{bmatrix}
+    1 & -1\\ 
+    0 & 1 
+  \end{bmatrix}^{-1}
+  \cdot -1
+  \begin{bmatrix}
+    1 & -3\\ 
+    -1 & 2 
+  \end{bmatrix}
+\]
+\[
+  A = 
+  \begin{bmatrix}
+    1 & 1\\ 
+    0 & 1 
+  \end{bmatrix}
+  \cdot 
+  \begin{bmatrix}
+    -1 & 3\\ 
+    1 & -2 
+  \end{bmatrix}
+\]
+\[
+  A = 
+  \begin{bmatrix}
+    -1 + 3 & 1 - 2\\ 
+    0 + 0 & 1 - 2 
+  \end{bmatrix}
+\]
+\[
+  A = 
+  \begin{bmatrix}
+    2 & -1\\ 
+    0 & -1 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\subsubsection*{Part (g)}
+\[
+  \left(A^T - 2I\right)^{-1} = 2\begin{bmatrix}
+    1 & 1\\ 
+    2 & 3 
+  \end{bmatrix}
+\]
+\vspace{0.25in}
+\subsubsection*{Solution (g)}
+\[
+  A^T - 2I = 2\begin{bmatrix}
+    1 & 1\\ 
+    2 & 3 
+  \end{bmatrix}^{-1}
+\]
+\[
+  A^T - 2I = 2 \cdot \frac{1}{3 - 2}\begin{bmatrix}
+    3 & -1\\ 
+    -2 & 1 
+  \end{bmatrix}
+\]
+\[
+  A^T = 2\begin{bmatrix}
+    3 & -1\\ 
+    -2 & 1 
+  \end{bmatrix} + 2I 
+\]
+\[
+  A^T = 2\begin{bmatrix}
+    5 & -1\\ 
+    -2 & 3 
+  \end{bmatrix}
+\]
+\[
+  A = 2\begin{bmatrix}
+    5 & -1\\ 
+    -2 & 3 
+  \end{bmatrix}^T 
+\]
+\vspace{0.25in}
+\[
+  A = 2\begin{bmatrix}
+    5 & -2\\ 
+    -1 & 3 
+  \end{bmatrix}
+\]
+\vspace{0.5in}
 \end{document}
