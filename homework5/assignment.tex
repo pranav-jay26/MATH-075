@@ -17,6 +17,529 @@
 \author{Pranav Jayakumar}
 
 \begin{document}
-
 \maketitle
+\vspace{1in}
+\subsection*{Exercise 2.5.1}
+\subsubsection*{Problem}
+For each of the following elementary matrices,
+describe the corresponding elementary row operations.\\
+\subsubsection*{Part (a)}
+\[
+  E = \begin{bmatrix}
+    1 & 0 & 3\\ 
+    0 & 1 & 0\\ 
+    0 & 0 & 1
+  \end{bmatrix}
+  \hspace{0.1in}
+\]
+\subsubsection*{Solution (a)}
+\[
+  E^{-1} = \begin{bmatrix}
+    1 & 0 & \frac{1}{3}\\ 
+    0 & 1 & 0\\ 
+    0 & 0 & 1\\ 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.5.2}
+\subsubsection*{Problem}
+In each case find an elementary matrix
+$E$ such that $E = BA$. 
+\subsubsection*{Part (a)}
+\[
+  A = \begin{bmatrix}
+    2 & 1\\ 
+    3 & -1
+  \end{bmatrix},
+  \hspace{0.1in}
+  B = \begin{bmatrix}
+    2 & 1\\ 
+    1 & -2 
+  \end{bmatrix}
+\]
+\subsubsection*{Solution (a)}
+\[
+  A \longrightarrow B
+\]
+\vspace{0.25in}
+\[
+  B = EA \longrightarrow \begin{bmatrix}
+    2 & 1\\ 
+    1 & -2 
+  \end{bmatrix} = \begin{bmatrix}
+    1 & 0\\ 
+    -1 & 1 
+  \end{bmatrix}\begin{bmatrix}
+    2 & 1\\ 
+    3 & -1
+  \end{bmatrix}
+\]
+\[
+  E = \begin{bmatrix}
+    1 & 0\\ 
+    -1 & 0 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.5.3}
+\subsubsection*{Problem}
+Let $A = \begin{bmatrix}
+  1 & 2\\ 
+  -1 & 1 
+\end{bmatrix}
+$ and $C = \begin{bmatrix}
+  -1 & 1\\ 
+  2 & 1 
+\end{bmatrix}
+$. 
+\subsubsection*{Part (a)}
+Find elementary matrices $E_1$ and $E_2$ such that $C = E_2E_1A$
+\subsubsection*{Solution (a)}
+\[
+  \begin{bmatrix}
+    1 & 2\\ 
+    -1 & 1 
+  \end{bmatrix} \overset{R_2 \leftrightarrow R_1}{\longrightarrow}\begin{bmatrix}
+    -1 & 1\\ 
+    1 & 2 
+    \end{bmatrix}\overset{R_2 \rightarrow R_2 - R_1}{\longrightarrow}\begin{bmatrix}
+    -1 & 1\\ 
+    2 & 1 
+  \end{bmatrix}
+\]
+\[
+  C = E_2E_1A \longrightarrow C = \begin{bmatrix}
+    1 & 0\\ 
+    1 & 1 
+    \end{bmatrix}\begin{bmatrix}
+    0 & 1\\ 
+    1 & 0 
+    \end{bmatrix}\begin{bmatrix}
+    1 & 2\\ 
+    -1 & 1 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.5.8}
+\subsubsection*{Problem}
+In each case factor $A$ as a product of elementary matrices. 
+\subsubsection*{Part (a)}
+\[
+  A = \begin{bmatrix}
+    1 & 1\\ 
+    2 & 1 
+  \end{bmatrix}
+\]
+\subsubsection*{Solution (a)}
+\[
+  E_1 = \begin{bmatrix}
+    0 & 1\\ 
+    1 & 0 
+  \end{bmatrix}\longrightarrow E_1(A) = \begin{bmatrix}
+    2 & 1\\ 
+    1 & 1 
+  \end{bmatrix}
+\]
+\[
+  E_2 = \begin{bmatrix}
+    1 & -1\\ 
+    0 & 1 
+  \end{bmatrix}\longrightarrow E_2(E_1A) = \begin{bmatrix}
+    1 & 0\\ 
+    1 & 1 
+  \end{bmatrix}
+\]
+\[
+  E_3 = \begin{bmatrix}
+    1 & 0\\ 
+    -1 & 1 
+  \end{bmatrix}\longrightarrow E_3(E_2E_1A) = \begin{bmatrix}
+    1 & 0\\ 
+    0 & 1 
+  \end{bmatrix}
+\]
+\[
+  E_3E_2E_1A = I 
+\]
+\[
+  A = E^{-1}_1E^{-1}_2E^{-1}_3I
+\]
+\[
+  A = \begin{bmatrix}
+    0 & 1\\ 
+    1 & 0 
+  \end{bmatrix}\begin{bmatrix}
+    1 & 1\\ 
+    1 & 0 
+  \end{bmatrix}\begin{bmatrix}
+    1 & 0\\ 
+    1 & 1 
+  \end{bmatrix}\begin{bmatrix}
+    1 & 0\\ 
+    0 & 1 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.6.1}
+\subsubsection*{Problem}
+Let $T: \mathbb{R}^3 \rightarrow \mathbb{R}^2$ be a linear transformation.
+\subsubsection*{Part (a)}
+Find $T\begin{bmatrix}
+  8\\ 
+  3\\ 
+  7 
+\end{bmatrix}
+$ if: 
+\[
+  T\begin{bmatrix}
+    1\\ 
+    0\\ 
+    -1 
+  \end{bmatrix}
+   = \begin{bmatrix}
+     2\\ 
+     3 
+    \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    2\\ 
+    1\\ 
+    3 
+  \end{bmatrix} = \begin{bmatrix}
+  -1\\ 
+  0 
+\end{bmatrix}
+\]
+\subsubsection*{Solution (a)}
+Let:
+\[
+  \textbf{v}_1 = \begin{bmatrix}
+    1\\ 
+    0\\ 
+    1 
+  \end{bmatrix}, \hspace{0.1in} \textbf{v}_2 = \begin{bmatrix}
+  2\\ 
+  2\\ 
+  3 
+\end{bmatrix}
+\]
+\[
+  \begin{bmatrix}
+    8\\ 
+    3\\ 
+    7 
+  \end{bmatrix} = a\textbf{v}_1 + b\textbf{v}_2 
+\]
+\[
+  \begin{bmatrix}
+    8\\ 
+    3\\ 
+    7 
+  \end{bmatrix} = a\begin{bmatrix}
+  1\\ 
+  0\\ 
+  1 
+  \end{bmatrix} + b\begin{bmatrix}
+  2\\ 
+  1\\ 
+  3 
+  \end{bmatrix}
+\]
+\[
+  \begin{cases}
+    a + 2b = 8\\ 
+    0a + b = 3\\ 
+    a + 3b = 7 
+  \end{cases}
+\]
+\[
+  \begin{bmatrix}
+    a\\ 
+    b 
+  \end{bmatrix} = RREF\left(\begin{bmatrix}
+    1 & 2 & 8\\ 
+    0 & 1 & 3\\ 
+    -1 & 3 & 7 
+  \end{bmatrix}\right)\longrightarrow\begin{bmatrix}
+    1 & 0 & 2\\ 
+    0 & 1 & 3\\ 
+    0 & 0 & 0 
+  \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+      8\\ 
+      3\\ 
+      7 
+    \end{bmatrix} = T(2\textbf{v}_1 + 3\textbf{v}_2) = T(2\textbf{v}_1) + T(3\textbf{v}_2)
+\]
+\[
+  T\begin{bmatrix}
+    8\\ 
+    3\\ 
+    7 
+  \end{bmatrix} = 2\begin{bmatrix}
+  2\\ 
+  3 
+  \end{bmatrix} + 3\begin{bmatrix}
+  -1\\ 
+  0 
+  \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    8\\ 
+    3\\ 
+    7 
+    \end{bmatrix} = \begin{bmatrix}
+    4\\ 
+    6 
+    \end{bmatrix} + \begin{bmatrix}
+    -3\\ 
+    0 
+  \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    8\\ 
+    3\\ 
+    7 
+  \end{bmatrix} = \begin{bmatrix}
+  1\\ 
+  6 
+\end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.6.2}
+\subsubsection*{Problem}
+Let $T: \mathbb{R}^4 \rightarrow \mathbb{R}^3$ be a linear transformation.
+\subsubsection*{Part (a)}
+Find $T\begin{bmatrix}
+  1\\ 
+  3\\ 
+  -2\\ 
+  -3 
+\end{bmatrix}
+$ if:
+\[
+  T\begin{bmatrix}
+    1\\ 
+    1\\ 
+    0\\ 
+    -1 
+  \end{bmatrix} = \begin{bmatrix}
+  2\\ 
+  3\\ 
+  1 
+  \end{bmatrix}, \hspace{0.1in} T\begin{bmatrix}
+  0\\ 
+  -1\\ 
+  1\\ 
+  1 
+\end{bmatrix}
+\]
+\subsubsection*{Solution (a)}
+Let:
+\[
+  \textbf{v}_1 = \begin{bmatrix}
+    1\\ 
+    1\\ 
+    0\\ 
+    1 
+  \end{bmatrix}, \hspace{0.1in} \begin{bmatrix}
+  0\\ 
+  -1\\ 
+  1\\ 
+  1 
+\end{bmatrix}
+\]
+\[
+  \begin{bmatrix}
+    1\\ 
+    3\\ 
+    -2\\ 
+    -3 
+  \end{bmatrix} = a\textbf{v}_1 + b\textbf{v}_2 
+\]
+\[
+  \begin{cases}
+    a + 0b = 1\\ 
+    a - b = 3\\ 
+    0a + b = -2\\ 
+    -a + b = -3 
+  \end{cases}
+\]
+\[
+  \begin{bmatrix}
+    a\\ 
+    b 
+  \end{bmatrix} = RREF\left(\begin{bmatrix}
+  1 & 0 & 1\\ 
+  1 & -1 & 3\\ 
+  0 & 1 & -2\\ 
+  -1 & 1 & -3 
+  \end{bmatrix}\right) \longrightarrow \begin{bmatrix}
+  1 & 0 & 1\\ 
+  0 & 1 & -2\\ 
+  0 & 0 & 0\\ 
+  0 & 0 & 0 
+  \end{bmatrix} \longrightarrow \begin{bmatrix}
+  1\\ 
+  -2 
+\end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    1\\ 
+    3\\ 
+    -2\\ 
+    -3 
+  \end{bmatrix} = T(\textbf{v}_1 - 2\textbf{v}_2) = T(\textbf{v}_1) + 2T(\textbf{v}_2)
+\]
+\[
+  T\begin{bmatrix}
+    1\\ 
+    3\\ 
+    -2\\ 
+    -3 
+  \end{bmatrix} = \begin{bmatrix}
+  2\\ 
+  3\\ 
+  -1 
+  \end{bmatrix} + \begin{bmatrix}
+  10\\ 
+  0\\ 
+  2 
+  \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    1\\ 
+    3\\ 
+    -2\\ 
+    -3 
+  \end{bmatrix} = \begin{bmatrix}
+  12\\ 
+  3\\ 
+  1 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.6.3}
+\subsubsection*{Problem}
+In each case assume that the transformation T is linear, and use Theorem 2.6.2 to obtain the matrix A of T. 
+\subsubsection*{Part (a)}
+\[
+  T: \mathbb{R}^2 \rightarrow \mathbb{R}^2 \hspace{0.1in} \text{is the reflection in the line} \hspace{0.1in} y = -x 
+\]
+\subsubsection*{Solution (a)}
+\[
+  T\begin{bmatrix}
+    1\\ 
+    0 
+  \end{bmatrix} = \begin{bmatrix}
+  0\\ 
+  -1 
+  \end{bmatrix}, \hspace{0.1in} T\begin{bmatrix}
+  0\\ 
+  1 
+  \end{bmatrix} = \begin{bmatrix}
+  -1\\ 
+  0 
+  \end{bmatrix}
+\]
+\[
+  A = \begin{bmatrix}
+    T\begin{bmatrix}
+      1\\ 
+      0 
+    \end{bmatrix} & T\begin{bmatrix}
+      1\\ 
+      0 
+    \end{bmatrix}
+    \end{bmatrix} \longrightarrow A = \begin{bmatrix}
+    0 & -1\\ 
+    -1 & 0 
+  \end{bmatrix}
+\]
+\vspace{2in}
+\subsection*{Exercise 2.6.7}
+\subsubsection*{Problem}
+In each case show that $T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ is not a linear transformation. 
+\subsubsection*{Part (a)}
+\[
+  T\begin{bmatrix}
+    x\\ 
+    y 
+  \end{bmatrix} = \begin{bmatrix}
+  xy\\ 
+  0 
+  \end{bmatrix}
+\]
+\subsubsection*{Solution (a)}
+Let:
+\[
+  \textbf{u} = \begin{bmatrix}
+    x_1\\ 
+    y_1 
+  \end{bmatrix}, \hspace{0.1in} \textbf{v} = \begin{bmatrix}
+  x_2\\ 
+  y_2 
+  \end{bmatrix}
+\]
+$T$ is a linear transformation if:
+\[
+  T(\textbf{u} + \textbf{v}) = t(\textbf{u}) + T(\textbf{v})
+\]
+\[
+  T\left(\begin{bmatrix}
+    x_1\\ 
+    y_1 
+    \end{bmatrix} + \begin{bmatrix}
+    x_2\\ 
+    y_2 
+  \end{bmatrix}\right) = T\begin{bmatrix}
+  x_1\\ 
+  y_1 
+  \end{bmatrix} + T\begin{bmatrix}
+  x_2\\ 
+  y_2 
+  \end{bmatrix}
+\]
+\[
+  T\begin{bmatrix}
+    x_1 + x_2\\ 
+    y_1 + y_2 
+  \end{bmatrix} = T\begin{bmatrix}
+  x_1\\ 
+  y_1 
+  \end{bmatrix} + T\begin{bmatrix}
+  x_2\\ 
+  y_2 
+  \end{bmatrix}
+\]
+\[
+  \begin{bmatrix}
+    (x_1 + x_2)(y_1 + y_2)\\ 
+    0 
+  \end{bmatrix} = \begin{bmatrix}
+  x_1y_1\\ 
+  0 
+  \end{bmatrix} + \begin{bmatrix}
+  x_2y_2\\ 
+  0 
+  \end{bmatrix}
+\]
+\[
+  \begin{bmatrix}
+    (x_1 + x_2)(y_2 + y_2)\\ 
+    0 
+  \end{bmatrix} \neq \begin{bmatrix}
+  x_1y_1 + x_2y_2\\ 
+  0 
+  \end{bmatrix}
+\]
+$T$ does not satisfy the property of additivity. Therefore, it is not a linear transformation. 
+\vspace{2in}
 \end{document}
